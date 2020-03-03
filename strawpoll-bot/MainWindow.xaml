@@ -1,0 +1,31 @@
+﻿<Window x:Class="strawpoll_bot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:strawpoll_bot"
+        mc:Ignorable="d"
+        Title="Strawpoll Bot" ResizeMode="NoResize" Height="610.406" Width="518.963">
+    <Grid Height="520" VerticalAlignment="Top">
+        <Canvas x:Name="canvas" Margin="0,0,-0.2,-54">
+            <TextBlock x:Name="c_id_p" Width="484" Opacity="0.5" Canvas.Left="12" Canvas.Top="97" Height="18" Text="strawpoll id"/>
+            <TextBlock x:Name="c_ans_p" Width="484" Opacity="0.5" Canvas.Left="12" Canvas.Top="120" Height="18" Text="answer"/>
+            <TextBlock Width="484" Canvas.Left="10" Canvas.Top="10" Height="82"><Run Text="Many proxies can fail by being detected or simply not working at all. Send more at once for"/><LineBreak/><Run Text="a higher chance of success."/><LineBreak/><Run Text="If you have a better proxy list input it (sep. by space, comma, semicolon, tab)"/><LineBreak/><Run Text="Warning: don't send too many requests (&gt;100) at once rather send a smaller amount "/><LineBreak/><Run Text="many times."/></TextBlock>
+            <TextBlock x:Name="n_req_p" Width="484" Opacity="0.5" Canvas.Left="12" Canvas.Top="143" Height="18" Text="number of votes"/>
+            <TextBlock x:Name="proxy_p" Width="484" Opacity="0.5" Canvas.Left="12" Canvas.Top="166" Height="18" Text="proxy list"/>
+            <TextBox Background="Transparent" TextChanged="InputChanged" Width="484" x:Name="c_id" Canvas.Left="10" Canvas.Top="97" Height="18"/>
+            <TextBox Background="Transparent" TextChanged="InputChanged"  Width="484" x:Name="c_ans" Canvas.Left="10" Canvas.Top="120"/>
+            <TextBox  Background="Transparent" TextChanged="InputChanged"  Width="485" x:Name="n_req" Canvas.Left="10" Canvas.Top="143" RenderTransformOrigin="0.497,1.314"/>
+            <Button Click="Button_Click" Width="484" Canvas.Left="10" Content="Go" Canvas.Top="189" Height="18"/>
+            <ProgressBar x:Name="progress" Width="484" Canvas.Left="10" Canvas.Top="256" Height="18"/>
+            <TextBox IsReadOnly="True" TextChanged="Output_TextChanged" Width="484" x:Name="output" Canvas.Left="10" Canvas.Top="279" Height="290"/>
+
+            <TextBox IsReadOnly="True" Width="484" Foreground="Green" x:Name="success" Canvas.Left="10" Canvas.Top="212" Height="17"/>
+            <TextBox IsReadOnly="True" Width="484" Foreground="Red" x:Name="fail" Canvas.Left="10" Canvas.Top="234" Height="17"/>
+            <TextBox  Background="Transparent" TextChanged="InputChanged"  Width="485" x:Name="proxy_arr" Canvas.Left="10" Canvas.Top="166" RenderTransformOrigin="0.497,1.314"/>
+
+        </Canvas>
+
+
+    </Grid>
+</Window>
